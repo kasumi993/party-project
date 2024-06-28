@@ -1,7 +1,7 @@
 
 <template>
   <header>
-    <nav class="bg-transparent border-gray-200 px-4 lg:px-6 py-2.5">
+    <nav class="border-gray-200 px-4 lg:px-6 py-2.5" :class="{'gradient-animation': $route.name === 'home'}">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a
           href="/home"
@@ -10,8 +10,8 @@
           <img
             alt="PartyUp logo"
             class="logo"
-            src="../../assets/partyUP.png"
-            width="70"
+            src="../../assets/partyUp.svg"
+            width="50"
           >
           <span class="ml-4 self-center text-xl font-semibold whitespace-nowrap">PartyUp</span>
         </a>
@@ -124,5 +124,14 @@ export default {
 </script>
 
 <style scoped>
-
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.gradient-animation {
+  background: linear-gradient(270deg, rgba(230, 224, 255, 0.98), rgba(255, 209, 229, 0.98), rgba(255, 206, 200, 0.98), rgba(200, 255, 207, 0.98));
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+}
 </style>

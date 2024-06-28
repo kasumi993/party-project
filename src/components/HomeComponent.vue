@@ -1,7 +1,7 @@
 <template>
   <div class="h-screen w-full">
-    <div class="gradient-animation p-24 flex flex-col items-center pt-24">
-      <h1 class="lobster-regular text-6xl mb-6 text-center">Trouve une soirée et éclate toi !</h1>
+    <div class="gradient-animation p-16 flex flex-col items-center" :class="">
+      <h1 class="lobster-regular text-6xl mb-12 text-center">Trouve une soirée et éclate toi !</h1>
 
       <form class="w-3/4">
         <div class="flex">
@@ -35,11 +35,10 @@
       </form>
 
     </div>
-
     <div class="mt-12 mx-12">
       <div class="grid grid-cols-3 md:grid-cols-4 gap-6 gap-y-12">
-        <div v-for="(item, index) in 14" :key="index">
-          <card-component :index="index"></card-component>
+        <div v-for="event in eventsList" :key="event.id">
+          <card-component :event="event"></card-component>
         </div>
       </div>
     </div>
@@ -53,6 +52,110 @@ import CardComponent from "@/components/CardComponent.vue";
 export default defineComponent({
   name: "HomeComponent",
   components: {CardComponent},
+  data() {
+    return {
+      eventsList: [
+        {
+          id: 0,
+          title: 'Monopoly et pizza',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 1,
+          title: 'Soirée à maison de la paix',
+          host: 'Cathy',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 2,
+          title: 'Soirée Jeux videos chez mini',
+          host: 'Mini',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 3,
+          title: 'Soirée Jeux videos chez Wendy',
+          host: 'Wendy',
+          date: '24 Aout 2022 22h:00',
+          entry: 0,
+        },
+        {
+          id: 4,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 5,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 6,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 23h:00',
+          entry: 0,
+        },
+        {
+          id: 7,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 8,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 9,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 10,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 11,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 12,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        },
+        {
+          id: 13,
+          title: 'Soirée à maison de la paix',
+          host: 'Wendy et Lisa',
+          date: '24 Aout 2022 22h:00',
+          entry: 15,
+        }
+      ]
+    }
+  },
   methods: {
     toggle() {
       this.$refs.dropdown.classList.toggle('hidden');

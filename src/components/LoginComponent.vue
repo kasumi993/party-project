@@ -1,7 +1,7 @@
 <template>
   <div class="gradient-animation flex flex-col items-center justify-center h-screen">
     <div class="bg-white p-6 pb-16 flex flex-col items-center rounded-lg shadow-md w-full max-w-md space-y-8">
-      <img src="@/assets/partyUP.png" class="mb-2" width="130">
+      <img src="@/assets/partyUp.svg" class="mb-2" width="130">
       <div>
       <form
           class="space-y-4"
@@ -87,7 +87,7 @@ const route = useRoute()
 
 const authStore = useAuthStore()
 
-const apiUrl = 'http://localhost:3000' // Votre API URL
+const apiUrl = 'http://localhost:8081' // Votre API URL
 const username = ref('')
 const password = ref('')
 const fullName = ref('')
@@ -144,7 +144,7 @@ const doCreateAccount = async () => {
   100% { background-position: 0% 50%; }
 }
 .gradient-animation {
-  background: linear-gradient(270deg, #8b5cf6, #ec4899);
+  background: linear-gradient(270deg, rgba(230, 224, 255, 0.98), rgba(255, 209, 229, 0.98), rgba(255, 206, 200, 0.98), rgba(200, 255, 207, 0.98));
   background-size: 400% 400%;
   animation: gradient-bg 15s ease infinite;
 }
