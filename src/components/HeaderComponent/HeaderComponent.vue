@@ -23,14 +23,14 @@
           </div>
           <div
             v-if="!authStore.authenticated"
-            class="cursor-pointer text-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800"
+            class="ml-6 cursor-pointer text-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-white focus:ring-gray-800"
             @click="login"
           >
             Se connecter
           </div>
           <div
             v-else
-            class="cursor-pointer text-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800"
+            class="ml-6 cursor-pointer text-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-white focus:ring-gray-800"
             @click="logout"
           >
             Se déconnecter
@@ -81,13 +81,13 @@
               <a
                 href="#"
                 class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-gray-700 hover:bg-gray-700 border-gray-700"
-              >Mes événements</a>
+              >Mes soirées</a>
             </li>
             <li>
               <a
                 href="#"
                 class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-gray-700 hover:bg-gray-700 border-gray-700"
-              >A propos de nous</a>
+              >Mon programme</a>
             </li>
             <li>
               <a

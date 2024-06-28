@@ -8,7 +8,7 @@
     </div>
     <div class="py-4">
       <h3 class="text-lg font-semibold mb-1">{{ event.title }}</h3>
-      <p class="text-sm text-gray-600 font-thin">Hôte(s) : {{ event.host }}</p>
+      <p class="text-sm text-gray-600 font-thin">Hôte(s) : {{ event.host.name }}</p>
       <p class="text-sm text-gray-600 font-thin">{{ event.date }}</p>
       <p class="text-sm text-gray-600 font-thin" v-if="event.entry">Entrée: {{event.entry}}€</p>
       <p class="text-sm text-gray-600 font-thin" v-else>Entrée: Gratuite</p>
@@ -25,7 +25,7 @@ export default defineComponent({
   props: ['event'],
   methods: {
     redirect() {
-      this.$router.push({ name: 'detail', params: { id: this.event.id, event: this.event } });
+      this.$router.push({ name: 'detail', params: { id: this.event.id }, query: { event: JSON.stringify(this.event) } });
     }
   }
 })

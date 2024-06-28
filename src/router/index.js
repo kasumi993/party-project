@@ -23,7 +23,7 @@ const routes = [
                 name: 'home',
                 component: Home,
                 meta: {
-                    auth: false,
+                    auth: true,
                 }
             },
             {
@@ -31,8 +31,8 @@ const routes = [
                 name: 'detail',
                 component: Detail,
                 meta: {
-                    auth: false,
-                }
+                    auth: true,
+                },
             }
         ]
     },

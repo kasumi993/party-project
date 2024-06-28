@@ -95,7 +95,7 @@ const loginMode = ref(true)
 
 const doLogin = async () => {
   try {
-    const response = await fetch(`${apiUrl}/authenticate`, {
+    const response = await fetch(`${apiUrl}/api/v1/user/login`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -116,7 +116,7 @@ const doLogin = async () => {
 
 const doCreateAccount = async () => {
   try {
-    const response = await fetch(`${apiUrl}/users`, {
+    const response = await fetch(`${apiUrl}/api/v1/user/save`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
