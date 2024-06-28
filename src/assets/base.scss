@@ -1,3 +1,18 @@
+@font-face {
+  font-family: 'FreelyMovable';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(fonts/FreelyMovableRegular.ttf) format('ttf');
+}
+
+.lobster-regular {
+  font-family: "Lobster", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

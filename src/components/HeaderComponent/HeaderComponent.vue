@@ -1,7 +1,7 @@
 
 <template>
   <header>
-    <nav class="bg-gray-800 border-gray-200 px-4 lg:px-6 py-2.5">
+    <nav class="bg-transparent border-gray-200 px-4 lg:px-6 py-2.5">
       <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
         <a
           href="/home"
@@ -11,22 +11,26 @@
             alt="PartyUp logo"
             class="logo"
             src="../../assets/partyUP.png"
-            width="25"
-            height="25"
+            width="70"
           >
-          <span class="ml-4 self-center text-xl font-semibold whitespace-nowrap text-white">PartyUp</span>
+          <span class="ml-4 self-center text-xl font-semibold whitespace-nowrap">PartyUp</span>
         </a>
         <div class="flex items-center lg:order-2">
+          <div>
+            <button type="submit" class="px-4 py-2 text-sm font-medium h-full text-white bg-purple-500 rounded-lg hover:bg-blue-800">
+              <span class="">J'organise !</span>
+            </button>
+          </div>
           <div
             v-if="!authStore.authenticated"
-            class="cursor-pointer text-white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800"
+            class="cursor-pointer text-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800"
             @click="login"
           >
             Se connecter
           </div>
           <div
             v-else
-            class="cursor-pointer text-white focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800"
+            class="cursor-pointer text-gray-800 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 hover:bg-gray-700 focus:ring-gray-800"
             @click="logout"
           >
             Se déconnecter
@@ -61,40 +65,6 @@
             /></svg>
           </button>
         </div>
-        <transition name="fade">
-          <form class="w-max">
-            <label
-              for="default-search"
-              class="mb-2 text-sm font-medium sr-only text-white"
-            >Chercher</label>
-            <div class="relative w-72">
-              <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                <svg
-                  class="w-4 h-4 text-gray-400"
-                  aria-hidden="true"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-                  />
-                </svg>
-              </div>
-              <input
-                id="default-search"
-                type="search"
-                class="block w-full p-1 ps-10 text-sm border outline-none rounded-lg bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Rechercher des concours..."
-                required
-              >
-            </div>
-          </form>
-        </transition>
         <div
           id="mobile-menu-2"
           class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1"
@@ -103,26 +73,26 @@
             <li>
               <a
                 href="/home"
-                class="block py-2 pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 text-white"
+                class="block py-2 pr-4 pl-3 rounded bg-primary-700 lg:bg-transparent lg:text-primary-700 lg:p-0 text-gray-700"
                 aria-current="page"
               >Accueil</a>
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 border-gray-700"
-              >Résultats</a>
+                class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-gray-700 hover:bg-gray-700 border-gray-700"
+              >Mes événements</a>
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 border-gray-700"
-              >Concours</a>
+                class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-gray-700 hover:bg-gray-700 border-gray-700"
+              >A propos de nous</a>
             </li>
             <li>
               <a
                 href="#"
-                class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-white hover:bg-gray-700 border-gray-700"
+                class="block py-2 pr-4 pl-3 border-b lg:hover:bg-transparent lg:border-0 lg:hover:text-primary-700 lg:p-0 text-gray-400 lg:hover:text-gray-700 hover:bg-gray-700 border-gray-700"
               >Contact</a>
             </li>
           </ul>
