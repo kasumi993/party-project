@@ -1,9 +1,8 @@
 <template>
-  <div class="bg-gray-800 flex items-center justify-center">
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md space-y-6">
-      <h1 class="text-2xl font-bold mb-4 text-center">
-        {{ loginMode ? "Se connecter" : "Créer un compte" }}
-      </h1>
+  <div class="gradient-animation flex flex-col items-center justify-center h-screen">
+    <div class="bg-white p-6 pb-16 flex flex-col items-center rounded-lg shadow-md w-full max-w-md space-y-8">
+      <img src="@/assets/partyUP.png" class="mb-2" width="130">
+      <div>
       <form
           class="space-y-4"
           @submit.prevent="loginMode ? doLogin() : doCreateAccount()"
@@ -57,7 +56,7 @@
               class="input-field mb-4"
           >
         </div>
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center mt-8">
           <button
               type="button"
               class="button secondary"
@@ -73,6 +72,7 @@
           </button>
         </div>
       </form>
+    </div>
     </div>
   </div>
 </template>
@@ -138,6 +138,16 @@ const doCreateAccount = async () => {
 </script>
 
 <style scoped>
+@keyframes gradient-bg {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.gradient-animation {
+  background: linear-gradient(270deg, #8b5cf6, #ec4899);
+  background-size: 400% 400%;
+  animation: gradient-bg 15s ease infinite;
+}
 .input-field {
   width: 100%;
   padding: 8px;
@@ -164,7 +174,7 @@ const doCreateAccount = async () => {
   margin-left: 8px;
 }
 .button:hover {
-  background-color: #4f46e5;
+  background-color: #57016b;
   color: white;
 }
 </style>

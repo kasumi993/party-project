@@ -3,18 +3,30 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from '@/components/HomeComponent.vue';
 import Login from '@/components/LoginComponent.vue';
+import FixedHeadercontainer from "@/containers/fixedHeadercontainer.vue";
 
 const routes = [
-    {
-        path: '/',
-        name: 'home',
-        component: Home
-    },
     {
         path: '/login',
         name: 'login',
         component: Login
-    }
+    },
+    {
+        path: '/',
+        name: 'index',
+        redirect: '/home',
+        component: FixedHeadercontainer,
+        children: [
+            {
+                path: '/home',
+                name: 'home',
+                component: Home,
+                meta: {
+                    auth: true,
+                }
+            }
+        ]
+    },
 ];
 
 const router = createRouter({
